@@ -27,10 +27,9 @@ app.post('/todos',function (req,res) {
 
 
 app.get('/todos',function (req,res) {
-   
     todo.Todo.find().then(function(todos)
     {
-        res.send({todos});   
+        res.send({todos});   // returns as an object
     },function(err) {
         res.status(400).send(err);
     });
